@@ -27,6 +27,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->comboBox_3->addItems(weight);
     ui->lineEdit->setText("0");
 
+    connect(ui->comboBox_2, SIGNAL(currentIndexChanged(int)), this, SLOT(Update()));
+    connect(ui->comboBox_3, SIGNAL(currentIndexChanged(int)), this, SLOT(Update()));
+
 }
 
 MainWindow::~MainWindow()
@@ -66,12 +69,12 @@ double MainWindow::Convert(double InValue, int TypeUnits, int FromUnits, int ToU
 
 }
 
-void MainWindow::on_comboBox_2_currentIndexChanged(int index)
-{
-    Update();
-}
+//void MainWindow::on_comboBox_2_currentIndexChanged(int index)
+//{
+//    Update();
+//}
 
-void MainWindow::on_comboBox_3_currentIndexChanged(int index)
-{
-    Update();
-}
+//void MainWindow::on_comboBox_3_currentIndexChanged(int index)
+//{
+//    Update();
+//}
