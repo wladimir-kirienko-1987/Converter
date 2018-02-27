@@ -124,15 +124,27 @@
     <property name="title">
      <string>Файл</string>
     </property>
+    <addaction name="action"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
      <string>Справка</string>
     </property>
+    <addaction name="action_2"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
+  <action name="action">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
