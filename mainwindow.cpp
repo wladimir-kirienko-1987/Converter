@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
 
 const double m_convert[2][11] = {
  {100, 1, 10, 0.1, 0.2, 1000, 0.001, 0.01, 1000000, 28.349523125, 453.59237}, //Гектограмм Грамм Декаграмм Дециграмм Карат Килограмм Миллиграмм Сантиграмм Тонна Унция Фунт
@@ -78,3 +79,15 @@ double MainWindow::Convert(double InValue, int TypeUnits, int FromUnits, int ToU
 //{
 //    Update();
 //}
+
+void MainWindow::on_action_triggered()
+{
+    close();
+}
+
+void MainWindow::on_action_2_triggered()
+{
+    QMessageBox Msgbox;
+    Msgbox.setText("Конвертер величин");
+    Msgbox.exec();
+}
