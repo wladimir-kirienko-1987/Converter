@@ -52,7 +52,8 @@ void MainWindow::Update()
     QString InValue = ui->lineEdit->text();
     double res = Convert(InValue.toDouble(), ui->comboBox->currentIndex(), ui->comboBox_2->currentIndex(),  ui->comboBox_3->currentIndex());
     QString OutValue = QString();
-    OutValue.setNum(res);
+    //OutValue.setNum(res);
+    OutValue = QString::number(res, 'g', 15);
     ui->lineEdit_2->setText(OutValue);
 }
 
@@ -82,12 +83,14 @@ double MainWindow::Convert(double InValue, int TypeUnits, int FromUnits, int ToU
 
 void MainWindow::on_action_triggered()
 {
-    close();
+    //close();
+    QApplication::quit();
 }
 
 void MainWindow::on_action_2_triggered()
 {
-    QMessageBox Msgbox;
-    Msgbox.setText("Конвертер величин");
-    Msgbox.exec();
+    //QMessageBox Msgbox;
+    //Msgbox.setText("Конвертер величин");
+    //Msgbox.exec();
+    QMessageBox::information(this,"О программе","Конвертер величин v 1.00");
 }
