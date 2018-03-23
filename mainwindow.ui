@@ -6,15 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>376</width>
-    <height>279</height>
+    <width>371</width>
+    <height>255</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>371</width>
+    <height>255</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>371</width>
+    <height>255</height>
+   </size>
   </property>
   <property name="acceptDrops">
    <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string>Конвертер величин</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: orange;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QComboBox" name="comboBox">
@@ -26,35 +41,67 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+    border: 2px solid black;
+    padding: 0 8px;
+    background: yellow;
+    selection-background-color: black;
+}</string>
+    </property>
    </widget>
    <widget class="QComboBox" name="comboBox_2">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>121</y>
       <width>331</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+    border: 2px solid black;
+    padding: 0 8px;
+    background: yellow;
+    selection-background-color: black;
+}</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox_3">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>190</y>
+      <y>194</y>
       <width>331</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+    border: 2px solid black;
+    padding: 0 8px;
+    background: yellow;
+    selection-background-color: black;
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>231</width>
+      <y>20</y>
+      <width>311</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
     </property>
     <property name="text">
      <string>Выберите тип преобразуемой велечины</string>
@@ -63,11 +110,19 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>71</y>
+      <x>21</x>
+      <y>78</y>
       <width>47</width>
-      <height>10</height>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
     </property>
     <property name="text">
      <string>Из</string>
@@ -76,11 +131,19 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>21</x>
       <y>149</y>
       <width>47</width>
-      <height>10</height>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
     </property>
     <property name="text">
      <string>в</string>
@@ -90,15 +153,23 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>90</y>
+      <y>97</y>
       <width>331</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid black;
+    padding: 0 8px;
+    background: yellow;
+    selection-background-color: darkgray;
+}</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -108,15 +179,25 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    border: 2px solid black;
+    padding: 0 8px;
+    background: yellow;
+    selection-background-color: black;
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>376</width>
+     <width>371</width>
      <height>21</height>
     </rect>
    </property>

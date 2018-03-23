@@ -2,9 +2,12 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 
-const double m_convert[2][11] = {
+const double m_convert[5][11] = {
  {100, 1, 10, 0.1, 0.2, 1000, 0.001, 0.01, 1000000, 28.349523125, 453.59237}, //Гектограмм Грамм Декаграмм Дециграмм Карат Килограмм Миллиграмм Сантиграмм Тонна Унция Фунт
- {86400, 0.000001, 0.001, 60, 604800, 1, 3600, 0, 0, 0, 0 }//День Микросекунда  Миллисекунда Минута Неделя Секунда Час
+ {86400, 0.000001, 0.001, 60, 604800, 1, 3600, 0, 0, 0, 0 },//День Микросекунда  Миллисекунда Минута Неделя Секунда Час
+ {17.58426666666667, 1, 1000, 745.6998715822702, 0.0225969658055233},//Британские тепловые единицы в минуту  Ватт Киловатт  Лошадиная сила  Футо-фунты в минуту
+ {1, 3.6, 1.609344, 0.036, 1.852}, //Километр в час  Метр в секунду  Миль в час  Сантиметр в секунду  Узлы
+ {1, 4.1868, 1000, 4186.8} //Джоуль  Калория  Килоджоуль  Килокалория
 };
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -13,12 +16,18 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    types << "Вес/Macca" << "Время";
+    types << "Вес/Macca" << "Время" << "Мощность" << "Скорость" << "Энергия";
     weight <<"Гектограмм" << "Грамм" << "Декаграмм" << "Дециграмм" << "Карат" << "Килограмм" << "Миллиграмм" << "Сантиграмм" << "Тонна" << "Унция" << "Фунт";
     time << "День" << "Микросекунда" << "Миллисекунда" << "Минута"<< "Неделя" << "Секунда" << "Час";
+    power << "Британские тепловые единицы в минуту" << "Ватт" << "Киловатт" << "Лошадиная сила" << "Футо-фунты в минуту";
+    speed << "Километр в час" << "Метр в секунду" << "Миль в час" << "Сантиметр в секунду" << "Узлы";
+    energy << "Джоуль" << "Калория" << "Килоджоуль" << "Килокалория";
 
     CTypes_.push_back(weight);
     CTypes_.push_back(time);
+    CTypes_.push_back(power);
+    CTypes_.push_back(speed);
+    CTypes_.push_back(energy);
 
     ui->comboBox->clear();
     ui->comboBox->addItems(types);
@@ -30,7 +39,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->comboBox_2, SIGNAL(currentIndexChanged(int)), this, SLOT(Update()));
     connect(ui->comboBox_3, SIGNAL(currentIndexChanged(int)), this, SLOT(Update()));
-
 }
 
 MainWindow::~MainWindow()
@@ -57,8 +65,6 @@ void MainWindow::Update()
     ui->lineEdit_2->setText(OutValue);
 }
 
-
-
 void MainWindow::on_lineEdit_textChanged(const QString &arg1)
 {
     Update();
@@ -71,26 +77,12 @@ double MainWindow::Convert(double InValue, int TypeUnits, int FromUnits, int ToU
 
 }
 
-//void MainWindow::on_comboBox_2_currentIndexChanged(int index)
-//{
-//    Update();
-//}
-
-//void MainWindow::on_comboBox_3_currentIndexChanged(int index)
-//{
-//    Update();
-//}
-
 void MainWindow::on_action_triggered()
 {
-    //close();
     QApplication::quit();
 }
 
 void MainWindow::on_action_2_triggered()
 {
-    //QMessageBox Msgbox;
-    //Msgbox.setText("Конвертер величин");
-    //Msgbox.exec();
     QMessageBox::information(this,"О программе","Конвертер величин v 1.00");
 }

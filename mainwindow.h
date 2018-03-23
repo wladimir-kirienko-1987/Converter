@@ -35,10 +35,11 @@ private:
     Ui::MainWindow *ui;
 
     QStringList types;//типы конвертирования
-
     QStringList weight;//масса
-
     QStringList time;//время
+    QStringList power;//мощность
+    QStringList speed;//скорость
+    QStringList energy;//энергия
 
     QVector<QStringList> CTypes_;
 
