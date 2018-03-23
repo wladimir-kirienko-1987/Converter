@@ -47,7 +47,12 @@
     padding: 0 8px;
     background: yellow;
     selection-background-color: black;
-}</string>
+}
+
+QComboBox QAbstractItemView{
+    background: yellow;
+	selection-background-color: black;
+ }</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox_2">
@@ -65,7 +70,12 @@
     padding: 0 8px;
     background: yellow;
     selection-background-color: black;
-}</string>
+}
+
+QComboBox QAbstractItemView{
+    background: yellow;
+	selection-background-color: black;
+ }</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox_3">
@@ -83,7 +93,12 @@
     padding: 0 8px;
     background: yellow;
     selection-background-color: black;
-}</string>
+}
+
+QComboBox QAbstractItemView{
+    background: yellow;
+	selection-background-color: black;
+ }</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
